@@ -17,18 +17,12 @@ var cognomi = ['Rossi', 'Verdi', 'Forte', 'Deangelis', 'Maldini'];
 cognomi.push(cognomeUtente);
 cognomi.sort();
 // Stampo la lista con la relativa posizione dell'elemento
-trovato = false;
-i = 0;
-
-while (i < cognomi.length && trovato == false) {
-    if (cognomeUtente == cognomi[i]) {
-        trovato = true;
+i = 0
+while (i < cognomi.length) {
+    if (cognomeUtente == cognomi[i]){
+        document.getElementById('cognomi').innerHTML += '<li>' + cognomi[i] + ' ' + 'si trova in posizione: ' + (i + 1) + '</li>';
+    } else {
+        document.getElementById('cognomi').innerHTML += '<li>' + cognomi[i] + '</li>';
     }
     i++
-}
-
-if (trovato) {
-    alert('il Cognome '+  cognomeUtente + 'si trova in posizione ' + i) ;
-} else {
-    alert('non trovato')
 }
