@@ -7,11 +7,51 @@
 body {
     display: flex;
     justify-content: center;
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 500px;
     height: 500px;
     text-align: center;
-    background-color: yellow;
+    color: white;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    box-shadow: 0 0 14px #000;
+    border-radius: 10px;
+}
+
+.container ul {
+    padding: 20px;
+    list-style: none;
+}
+
+.container ul li {
+    font-size: 25px;
+    animation: all 4s ease-in-out;
+    filter: blur(2px);
+    color: white;
+}
+
+.container:hover #cognomi li{
+    filter: none;
+    cursor: pointer;
+}
+
+#cognomi li:hover {
+    transform: scale(1.2);
 }
