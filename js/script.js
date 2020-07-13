@@ -12,7 +12,18 @@ var cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(
 // Inizializzazione e aggiunta cognomeUtente nell'array e ordino alfabeticamente
 
 var cognomi = ['Rossi', 'Verdi', 'Forte', 'Deangelis', 'Maldini'];
-cognomi.push(cognomeUtente);
+i = 0;
+uguale = false;
+while (i < cognomi.length && uguale == false) {
+    if (cognomeUtente == cognomi[i]) {
+        uguale = true;
+    }
+    i++;
+}
+if (!uguale) {
+    cognomi.push(cognomeUtente);
+}
+
 cognomi.sort();
 // Stampo la lista con la relativa posizione dell'elemento
 
