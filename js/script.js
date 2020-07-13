@@ -7,9 +7,7 @@
 // Routine Settaggio Cognome
 
 var cognomeUtente = prompt('inserisci il tuo Cognome');
-primaLettera = cognomeUtente.charAt(0).toUpperCase();
-lettereRestanti = cognomeUtente.slice(1).toLowerCase();
-var cognomeUtente = primaLettera + lettereRestanti;
+var cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1).toLowerCase();
 
 // Inizializzazione e aggiunta cognomeUtente nell'array e ordino alfabeticamente
 
