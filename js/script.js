@@ -8,8 +8,9 @@
 
 var cognomeUtente = prompt('inserisci il tuo Cognome');
 var numeri = RegExp('[0-9]' );
+var carSpec = RegExp('[!@#$%^&*()+=,./{}|:<>?]');
 
-while(numeri.test(cognomeUtente) == true){
+while((numeri.test(cognomeUtente) == true) || (carSpec.test(cognomeUtente) == true)){
    alert('Cognome non valido');
    cognomeUtente = prompt('inserisci il tuo Cognome');
 }
