@@ -7,11 +7,22 @@
 // Routine Settaggio Cognome
 
 var cognomeUtente = prompt('inserisci il tuo Cognome');
+var numeri = RegExp('[0-9]' );
+
+while(numeri.test(cognomeUtente) == true){
+   alert('Cognome non valido');
+   cognomeUtente = prompt('inserisci il tuo Cognome');
+}
+
+
 var cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1).toLowerCase();
 
 // Inizializzazione e aggiunta cognomeUtente nell'array e ordino alfabeticamente
 
 var cognomi = ['Rossi', 'Verdi', 'Forte', 'Deangelis', 'Maldini'];
+
+
+
 i = 0;
 uguale = false;
 while (i < cognomi.length && uguale == false) {
@@ -23,6 +34,9 @@ while (i < cognomi.length && uguale == false) {
 if (!uguale) {
     cognomi.push(cognomeUtente);
 }
+
+
+
 
 cognomi.sort();
 // Stampo la lista con la relativa posizione dell'elemento
